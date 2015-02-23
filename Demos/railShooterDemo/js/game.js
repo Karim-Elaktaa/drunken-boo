@@ -29,7 +29,7 @@ Game.init = function () {
     // for(var i=0; i<Game.path.length; i++)
     //     console.log(Game.path[i]);
 
-/*    Game.controls;
+    Game.controls;
     if(Game.isdisplayedOn3D){
         Game.controls = new THREE.OrbitControls(Game.camera, Game.element);
         Game.controls.rotateUp(Math.PI / 4);
@@ -44,21 +44,21 @@ Game.init = function () {
     else
     {
         Game.controls = new THREE.FlyControls( Game.camera );
-        Game.controls.movementSpeed = 2500;
+        Game.controls.movementSpeed = 0;
         Game.controls.domElement = Game.container;
         Game.controls.rollSpeed = Math.PI / 6;
-        Game.controls.autoForward = false;
+        Game.controls.autoForward = true;
         Game.controls.dragToLook = false
     }
-*/
+
     function setOrientationControls(e) {
     if (!e.alpha) {
       return;
     }
 
-/*        controls = new THREE.DeviceOrientationControls(Game.camera, true);
+        controls = new THREE.DeviceOrientationControls(Game.camera, true);
         controls.connect();
-        controls.update();*/
+        controls.update();
 
         Game.element.addEventListener('click', Game.fullscreen, false);
 
@@ -346,12 +346,12 @@ Game.update = function (dt)
 
     Game.camera.translateZ(-translateDistance);
 
-/*    if(Game.isdisplayedOn3D) {
+    if(Game.isdisplayedOn3D) {
         Game.controls.update(dt);
     }
     else {
         Game.controls.update(dt);
-    }*/
+    }
 
 
 
